@@ -1,4 +1,7 @@
 package org.example.sistemaparticipantes.strategy;
 
-public class ValidacionStrategy {
+public interface ValidacionStrategy {
+
+    boolean validar(String dato);
+
 }
