@@ -213,6 +213,35 @@ public class ParticipanteDAO {
         return null;
 
     }
+    public boolean existeCorreoActualizar(String correo, int id) {
+
+        try {
+
+            String sql = """
+                SELECT *
+                FROM participantes
+                WHERE correo = ?
+                AND id <> ?
+                """;
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, correo);
+            ps.setInt(2, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            return rs.next();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+        return false;
+
+    }
 
 }
 

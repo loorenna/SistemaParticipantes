@@ -340,6 +340,13 @@ public class CrudController implements Initializable {
             return;
 
         }
+        if (dao.existeCorreoActualizar(txtCorreo.getText(), idSeleccionado)) {
+
+            Alertas.error("Ese correo ya pertenece a otro participante");
+
+            return;
+
+        }
 
         Participante p = new Participante();
 

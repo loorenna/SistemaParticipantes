@@ -16,6 +16,9 @@ public class App extends Application {
         );
 
         Scene scene = new Scene(loader.load());
+        scene.getStylesheets().add(
+                getClass().getResource("estilos.css").toExternalForm()
+        );
 
         stage.setTitle("Sistema de Participantes");
 
