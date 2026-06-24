@@ -36,11 +36,19 @@ public class LoginController {
             try {
 
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/ec/edu/esfot/crud.fxml"));
+                        getClass().getResource("/org/example/sistemaparticipante/crud.fxml")
+                );
+
+                Scene scene = new Scene(loader.load());
+
+                scene.getStylesheets().add(
+                        getClass().getResource("/org/example/sistemaparticipante/estilos.css")
+                                .toExternalForm()
+                );
 
                 Stage stage = new Stage();
 
-                stage.setScene(new Scene(loader.load()));
+                stage.setScene(scene);
 
                 stage.setTitle("CRUD Participantes");
 
