@@ -36,13 +36,13 @@ public class LoginController {
             try {
 
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/org/example/sistemaparticipante/crud.fxml")
+                        getClass().getResource("/org/example/sistemaparticipantes/crud.fxml")
                 );
 
                 Scene scene = new Scene(loader.load());
 
                 scene.getStylesheets().add(
-                        getClass().getResource("/org/example/sistemaparticipante/estilos.css")
+                        getClass().getResource("/org/example/sistemaparticipantes/estilos.css")
                                 .toExternalForm()
                 );
 
